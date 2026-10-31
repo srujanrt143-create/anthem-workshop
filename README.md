@@ -1,33 +1,40 @@
-# anthem-workshop
-# 🇮🇳 National Anthem — Git & GitHub Collaboration Workshop
+# 🇮🇳 National Anthem — Git & GitHub Workshop
 
 <p align="center">
-  <strong>A Hands-on Git and GitHub Version Control Project</strong>
+  <strong>Hands-On Version Control and Collaborative Development</strong>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Git-Version%20Control-orange?logo=git" />
-  <img src="https://img.shields.io/badge/GitHub-Collaboration-black?logo=github" />
-  <img src="https://img.shields.io/badge/Python-Flask-blue?logo=python" />
+  <img src="https://img.shields.io/badge/GitHub-Repository-black?logo=github" />
+  <img src="https://img.shields.io/badge/Python-3.14-blue?logo=python" />
+  <img src="https://img.shields.io/badge/Flask-Web%20Framework-lightgrey?logo=flask" />
+  <img src="https://img.shields.io/badge/Platform-Windows%2011-blue?logo=windows" />
   <img src="https://img.shields.io/badge/Status-Completed-success" />
 </p>
 
+---
+
 ## 📌 Project Overview
 
-The **National Anthem Project** is a practical Git and GitHub workshop designed to demonstrate version control, collaborative development, branch management, merging, conflict resolution, and commit recovery.
+The **National Anthem — Git & GitHub Workshop** is a hands-on practical project focused on learning version control and collaborative software development.
 
-This project demonstrates how developers can work together, manage code changes, maintain project history, and collaborate efficiently using Git and GitHub.
+The project demonstrates how Git and GitHub help developers manage source code, track changes, maintain commit history, work with branches, merge independent development work, and resolve merge conflicts.
+
+The workshop was practised using **Windows PowerShell** on a Windows laptop.
 
 ## 🎯 Objectives
 
 - Understand Git and GitHub fundamentals.
-- Create and manage repositories.
-- Perform Git push and pull operations.
+- Initialize and manage local repositories.
+- Connect local projects to GitHub.
+- Perform push and pull operations.
 - Create and manage feature branches.
-- Merge branches into the main branch.
-- Identify and resolve merge conflicts.
-- Recover deleted commits using Git Reflog.
-- Understand collaborative software development workflows.
+- Make and track multiple commits.
+- Merge feature branches into the main branch.
+- Create and resolve merge conflicts.
+- Develop and run a Flask web application.
+- Understand Git history and repository synchronization.
 
 ## 🛠️ Technologies Used
 
@@ -35,10 +42,11 @@ This project demonstrates how developers can work together, manage code changes,
 |---|---|
 | Git | Version control |
 | GitHub | Remote repository hosting |
-| Python | Backend programming |
+| Windows PowerShell | Command-line interface |
+| Python 3.14 | Backend programming |
 | Flask | Web application framework |
-| HTML | Web page structure |
-| PowerShell | Windows command-line interface |
+| HTML5 | Web page structure |
+| GitHub README | Project documentation |
 
 ## 📂 Project Structure
 
@@ -53,46 +61,66 @@ anthem-workshop/
     └── index.html
 ```
 
-## 🚀 Workshop Activities
+## 🚀 Workshop Activities Completed
 
 ### Part 0 — Git Configuration
-- Configure Git username and email.
+
+- Installed and configured Git.
+- Configured Git username and email.
 - Set the default branch to `main`.
-- Prepare the development environment.
+- Prepared the Windows PowerShell development environment.
 
-### Part 1 — Repository Creation and Cloning
-- Initialize a Git repository.
-- Create the first commit.
-- Connect the local repository to GitHub.
-- Push the project to GitHub.
-- Clone the repository.
+### Part 1 — Repository Creation and Publishing
 
-### Part 2 — Push and Pull Collaboration
-- Create a Flask application.
-- Develop an HTML template.
-- Push application changes.
-- Pull updates from another developer's repository.
+- Initialized a local Git repository.
+- Created the `anthem.txt` file.
+- Added and committed the first anthem line.
+- Created the GitHub repository.
+- Connected the local repository to GitHub.
+- Published the project using Git push.
+
+### Part 2 — Project Development and Synchronization
+
+- Created the Flask backend application.
+- Created the HTML template.
+- Added project files to Git.
+- Committed application changes.
+- Practised Git pull and push operations.
+- Verified repository synchronization.
 
 ### Part 3 — Branching and Merging
-- Create feature branches.
-- Make multiple commits.
-- Push feature branches.
-- Merge feature branches into `main`.
-- Delete merged branches.
+
+- Created the `feature/second-stanza` branch.
+- Added two separate commits.
+- Pushed the feature branch to GitHub.
+- Merged the feature branch into `main`.
+- Verified the commit history and branch changes.
 
 ### Part 4 — Merge Conflict Resolution
-- Create two independent branches.
-- Modify the same HTML heading.
-- Generate a merge conflict.
-- Resolve the conflict manually.
-- Commit and push the resolved changes.
 
-### Part 5 — Undo and Recovery
-- Understand uncommitted changes.
-- Practise `git reset --hard`.
-- Recover committed work using `git reflog`.
+- Created the `title-english` branch.
+- Created the `title-bilingual` branch.
+- Modified the same HTML heading differently.
+- Generated an intentional merge conflict.
+- Inspected the conflict markers.
+- Resolved the conflict manually.
+- Committed and pushed the resolved changes.
 
-## 💻 Important Git Commands
+### Flask Application Testing
+
+- Installed Flask using pip.
+- Executed the Python application.
+- Started the Flask development server.
+- Verified successful server startup.
+- Confirmed that the application runs on port 5000.
+
+**Local application address:**
+
+```text
+http://127.0.0.1:5000
+```
+
+## 💻 Important Git Commands Practised
 
 ```powershell
 # Initialize repository
@@ -107,41 +135,71 @@ git add .
 # Commit changes
 git commit -m "Your commit message"
 
+# Connect remote repository
+git remote add origin REPOSITORY_URL
+
 # Push changes
 git push origin main
 
-# Pull updates
+# Pull latest changes
 git pull origin main
 
-# Create a branch
+# Create feature branch
 git switch -c feature/new-feature
 
-# Merge a branch
+# Switch branches
+git switch main
+
+# Merge branches
 git merge feature/new-feature
+
+# View branches
+git branch -a
 
 # View commit history
 git log --oneline --graph
 
-# Recover previous commits
-git reflog
+# Check tracked files
+git ls-files
 ```
+
+## ✅ Final Repository Verification
+
+The following project files were verified using `git ls-files`:
+
+```text
+README.md
+anthem.txt
+app.py
+templates/index.html
+```
+
+The final Git verification confirmed:
+
+- Main branch synchronized with GitHub.
+- Merge conflict successfully resolved.
+- Project files tracked by Git.
+- Flask development server started successfully.
+- Working tree clean with no pending changes.
 
 ## 📚 Key Learnings
 
-Through this workshop, I gained practical experience in:
+Through this practical workshop, I gained experience in:
 
-- Version control and repository management.
-- Collaborative development using GitHub.
-- Branching and merging strategies.
-- Handling real-world merge conflicts.
-- Managing commit history.
-- Recovering previous versions of a project.
+1. Git installation and configuration.
+2. Local and remote repository management.
+3. Version control and commit tracking.
+4. GitHub push and pull operations.
+5. Feature branch creation and merging.
+6. Merge conflict identification and resolution.
+7. Flask application development and execution.
+8. PowerShell-based development workflows.
 
 ## 👨‍💻 Author
 
 **Srujan**
 
-GitHub: [@srujanrt143-create](https://github.com/srujanrt143-create)
+GitHub Username: [@srujanrt143-create](https://github.com/srujanrt143-create)
 
 ## 🔗 Project Repository
 
@@ -150,7 +208,7 @@ GitHub: [@srujanrt143-create](https://github.com/srujanrt143-create)
 ---
 
 <p align="center">
-  <strong>Built with ❤️ while learning Git & GitHub</strong>
-  <br>
-  <sub>Learning • Practising • Collaborating • Growing</sub>
+  <strong>Built with ❤️ by Srujan</strong>
+  <br/>
+  <sub>Learn • Practise • Build • Collaborate • Grow</sub>
 </p>
